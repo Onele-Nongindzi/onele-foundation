@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onele Foundation: opening doors to work, learning and opportunity</title>
+<meta name="description" content="Onele Foundation empowers unemployed South Africans through free career tools, skills development, AI and digital training, and early learning, starting in Lusikisiki.">
+<link rel="icon" href="images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#3F1D63; --plum-2:#5B2A86; --gold:#E8B84A; --lilac:#EFE8F6; --ink:#1E1528; --soft:#5A4D68; --line:#DDD2E8; --white:#FFFFFF; --teal:#1F7A7A;
+  --head:"Bricolage Grotesque", "Arial Black", Arial, sans-serif;
+  --body:"Atkinson Hyperlegible", Verdana, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.6}
+a{color:var(--plum-2)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:8px 12px;border-radius:6px;z-index:10}
+.skip:focus{left:12px}
+
+/* header */
+.top{background:var(--plum);color:var(--white)}
+.top nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.logo{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-family:var(--head);font-weight:800;font-size:1.2rem}
+.logo img{width:34px;height:34px;border-radius:6px}
+.menu{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:.98rem}
+.menu a{color:#EBDDF6;text-decoration:none}
+.menu a:hover{color:var(--white);text-decoration:underline}
+@media (max-width:720px){.menu{display:none}}
+
+/* hero */
+.hero{background:var(--plum);color:var(--white);padding:56px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:center}
+.hero .art{width:100%;height:auto}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .art{display:none}}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.3rem,6vw,4.2rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 22px;max-width:15ch}
+.hero p{font-size:1.2rem;max-width:56ch;color:#EBDDF6;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font:inherit;font-weight:700;text-decoration:none;padding:13px 22px;border-radius:999px;border:2px solid var(--gold)}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.line{color:var(--white)}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.btn.plum{background:var(--plum);border-color:var(--plum);color:var(--white)}
+
+/* signature beadwork band */
+.beads{height:34px;background-color:var(--plum);
+  background-image:
+   linear-gradient(135deg,transparent 0 25%,var(--gold) 25% 50%,transparent 50%),
+   linear-gradient(225deg,transparent 0 25%,var(--gold) 25% 50%,transparent 50%),
+   linear-gradient(45deg,transparent 0 25%,var(--white) 25% 50%,transparent 50%),
+   linear-gradient(315deg,transparent 0 25%,var(--teal) 25% 50%,transparent 50%);
+  background-size:34px 34px;background-position:0 0,17px 0,0 17px,17px 17px}
+.beads.thin{height:18px;background-size:18px 18px;background-position:0 0,9px 0,0 9px,9px 9px}
+
+section{padding:72px 0}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;margin:0 0 18px;color:var(--plum)}
+h3{font-family:var(--head);font-weight:600;font-size:1.35rem;margin:0 0 8px}
+.lede{font-size:1.18rem;max-width:62ch;color:var(--soft)}
+
+/* story */
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.story p{max-width:60ch}
+.quote{background:var(--lilac);border-left:6px solid var(--gold);padding:24px 26px;border-radius:0 14px 14px 0;font-size:1.2rem;color:var(--plum)}
+.quote cite{display:block;margin-top:12px;font-style:normal;font-size:1rem;color:var(--soft)}
+@media (max-width:820px){.story{grid-template-columns:1fr}}
+
+/* work */
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:26px 0 40px}
+.mv div{background:var(--plum);color:var(--white);border-radius:18px;padding:28px}
+.mv h3{color:var(--gold);font-size:1.25rem}
+.mv p{margin:0;font-size:1.25rem;line-height:1.5}
+.goals-h{color:var(--plum);font-size:1.5rem}
+.goals{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px 34px}
+.goals li{padding-left:28px;position:relative;max-width:52ch}
+.goals li::before{content:"";position:absolute;left:0;top:.45em;width:12px;height:12px;background:var(--gold);transform:rotate(45deg)}
+.goals strong{color:var(--plum)}
+@media (max-width:820px){.mv,.goals{grid-template-columns:1fr}}
+.work{background:var(--lilac)}
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.prog article{background:var(--white);border-radius:18px;padding:26px;border-top:6px solid var(--plum-2)}
+.prog article:nth-child(2){border-top-color:var(--gold)}
+.prog article:nth-child(3){border-top-color:var(--teal)}
+.status{display:inline-block;font-size:.92rem;font-weight:700;padding:3px 12px;border-radius:999px;margin-bottom:12px}
+.live{background:#E2F3EA;color:#17603A}
+.soon{background:#FBF0D3;color:#6B4E00}
+.prog p{margin:0 0 10px;color:var(--soft)}
+@media (max-width:900px){.prog{grid-template-columns:1fr}}
+
+/* amathuba */
+.app{display:grid;grid-template-columns:1fr 340px;gap:54px;align-items:center}
+.app ul{padding-left:20px;margin:16px 0 24px}
+.app li{margin-bottom:8px}
+.phone{justify-self:center;width:300px;border-radius:34px;padding:12px;background:var(--ink);box-shadow:0 18px 40px rgba(63,29,99,.25)}
+.phone img{display:block;width:100%;height:auto;border-radius:24px}
+@media (max-width:820px){.app{grid-template-columns:1fr}.phone{width:260px}}
+
+/* involve */
+.ways{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:28px}
+.ways div{border:2px solid var(--line);border-radius:18px;padding:24px}
+.ways p{margin:0;color:var(--soft)}
+@media (max-width:760px){.ways{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--plum);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact p{color:#EBDDF6;max-width:58ch}
+.contact a{color:var(--gold)}
+footer{background:#2C1446;color:#CDBBDF;font-size:.95rem;padding:26px 0}
+footer p{margin:4px 0}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#"><img src="images/icon.png" alt="">Onele Foundation</a>
+      <ul class="menu">
+        <li><a href="#story">Our story</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#work">What we do</a></li>
+        <li><a href="#amathuba">Amathuba</a></li>
+        <li><a href="#involved">Get involved</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap">
+    <div>
+    <h1>Opening doors to work, learning and opportunity.</h1>
+    <p>Onele Foundation helps young people from Lusikisiki, and across South Africa, take their next step: their first job, a better job, or a strong start in learning.</p>
+    <div class="cta">
+      <a class="btn gold" href="https://onele-nongindzi.github.io/amathuba/?utm_campaign=foundation" target="_blank" rel="noopener">Try Amathuba, our free job app</a>
+      <a class="btn line" href="#involved">Partner with us</a>
+    </div>
+    </div>
+    <svg class="art" viewBox="0 0 300 300" aria-hidden="true">
+      <g>
+        <polygon points="150,10 290,150 150,290 10,150" fill="#E8B84A"/>
+        <polygon points="150,48 252,150 150,252 48,150" fill="#3F1D63"/>
+        <polygon points="150,78 222,150 150,222 78,150" fill="#FFFFFF"/>
+        <polygon points="150,104 196,150 150,196 104,150" fill="#1F7A7A"/>
+        <polygon points="150,128 172,150 150,172 128,150" fill="#E8B84A"/>
+        <g fill="#FFFFFF"><circle cx="150" cy="29" r="5"/><circle cx="271" cy="150" r="5"/><circle cx="150" cy="271" r="5"/><circle cx="29" cy="150" r="5"/></g>
+      </g>
+    </svg>
+  </div>
+</div>
+<div class="beads" role="presentation"></div>
+
+<section id="story">
+  <div class="wrap story">
+    <div>
+      <h2>Our story</h2>
+      <p>Onele Foundation was started by Onele Nongindzi, a software developer who grew up in Lusikisiki in the Eastern Cape.</p>
+      <p>Back home, she saw capable young people miss out on work for reasons that are easy to fix: a CV employers’ systems could not read, a Z83 form filled in on the wrong version, an opportunity nobody told them about, or a fake job advert asking for money they did not have.</p>
+      <p>So she started building the tools and support she wished they had, free of charge, and designed for the phones and data people really have.</p>
+    </div>
+    <blockquote class="quote">
+      Nearly half of young South Africans who want work cannot find it. We cannot fix that alone, but we can make sure no one misses an opportunity because of a CV, a form or a scam.
+      <cite>Onele Nongindzi, founder</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="mission" class="mission">
+  <div class="wrap">
+    <h2>Mission, vision and goals</h2>
+    <div class="mv">
+      <div>
+        <h3>Our mission</h3>
+        <p>To empower unemployed South Africans through accessible career resources, tools, skills and opportunities.</p>
+      </div>
+      <div>
+        <h3>Our vision</h3>
+        <p>A South Africa where employment support and new skills are within everyone’s reach, regardless of financial circumstances.</p>
+      </div>
+    </div>
+    <h3 class="goals-h">Where we are going</h3>
+    <p class="lede">Essential job-seeker services will always stay free. Over the long term, we aim to:</p>
+    <ul class="goals">
+      <li><strong>Teach AI skills.</strong> Free, practical training on using artificial intelligence safely and productively for study, work and small businesses.</li>
+      <li><strong>Build digital and job-ready skills.</strong> Computer basics, online safety, coding and workplace readiness, so young people can compete for today’s jobs.</li>
+      <li><strong>Grow skills development and learnerships.</strong> Partner with SETAs, TVET colleges and employers on accredited training that leads to work.</li>
+      <li><strong>Support young entrepreneurs.</strong> Help people start and grow small businesses with digital tools and practical guidance.</li>
+      <li><strong>Give children a strong start.</strong> Open a registered early learning centre in Lusikisiki.</li>
+      <li><strong>Build a South African employment-support ecosystem.</strong> Connect job seekers, trainers, employers and communities through Amathuba.</li>
+    </ul>
+  </div>
+</section>
+<div class="beads thin" role="presentation"></div>
+
+<section id="work" class="work">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="lede">Three programmes, one goal: helping people from every starting point move forward.</p>
+    <div class="prog">
+      <article>
+        <span class="status live">Live now</span>
+        <h3>Amathuba</h3>
+        <p>A free app that helps job seekers build a CV, find opportunities that match them, fill in the Z83 for government jobs and avoid scams.</p>
+        <p><a href="#amathuba">How Amathuba works</a></p>
+      </article>
+      <article>
+        <span class="status soon">Planned for 2027</span>
+        <h3>Early learning centre</h3>
+        <p>A safe, registered early childhood development centre in Lusikisiki, giving children a strong start and parents the chance to work.</p>
+      </article>
+      <article>
+        <span class="status soon">Starting 2027</span>
+        <h3>Digital help and workshops</h3>
+        <p>In-person CV and Z83 workshops with schools, TVET colleges and community groups, and a digital help corner with computers, printing and data.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="amathuba">
+  <div class="wrap app">
+    <div>
+      <h2>Amathuba: Opportunity Starts Here.</h2>
+      <p class="lede">Amathuba (“opportunities” in isiXhosa and isiZulu) serves the person looking for their very first job as fully as the professional ready for their next move.</p>
+      <ul>
+        <li>Build a CV that employers’ systems can read, or upload an old one and have it polished</li>
+        <li>Examples for people with no work experience: volunteering, school, church and caring for family all count</li>
+        <li>Jobs, learnerships and programmes matched to qualification and province</li>
+        <li>The official Z83 filled in for government jobs</li>
+        <li>Application tracking, interview practice and a scam checker</li>
+      </ul>
+      <p>It is free, needs no sign-up, and keeps people’s details on their own phones.</p>
+      <a class="btn plum" href="https://onele-nongindzi.github.io/amathuba/?utm_campaign=foundation" target="_blank" rel="noopener">Open Amathuba</a>
+    </div>
+    <div class="phone"><img src="images/amathuba-app.jpg" alt="The Amathuba app on a phone, showing the headline Opportunity Starts Here and its seven sections" width="640" height="1120"></div>
+  </div>
+</section>
+<div class="beads thin" role="presentation"></div>
+
+<section id="involved">
+  <div class="wrap">
+    <h2>Get involved</h2>
+    <p class="lede">Our job-seeker services will always be free. Partners and supporters make that possible.</p>
+    <div class="ways">
+      <div><h3>Sponsor Amathuba</h3><p>Help keep Amathuba free and growing, and show your company’s support for youth employment.</p></div>
+      <div><h3>Host a workshop</h3><p>Schools, TVET colleges, municipalities and community groups: bring a CV and Z83 workshop to your learners or members.</p></div>
+      <div><h3>Share opportunities</h3><p>Employers and recruiters: tell us about jobs, learnerships and internships, and we will share checked opportunities with job seekers.</p></div>
+      <div><h3>Volunteer or spread the word</h3><p>Help at workshops, test the app, or share Amathuba with someone who is looking for work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Talk to us</h2>
+    <p>Whether you want to partner, sponsor, volunteer or simply learn more, we would love to hear from you.</p>
+    <p><a href="mailto:onelenongindzi@gmail.com?subject=Onele%20Foundation">onelenongindzi@gmail.com</a></p>
+    <p>Based in Lusikisiki, OR Tambo District, Eastern Cape, South Africa.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Onele Foundation. Registration as a non-profit organisation with the Department of Social Development is in progress.</p>
+    <p>© 2026 Onele Foundation. Amathuba was created by Onele Nongindzi.</p>
+  </div>
+</footer>
+</body>
+</html>
